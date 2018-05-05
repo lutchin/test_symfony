@@ -1,0 +1,4 @@
+services:
+#    messenger_message.example:
+#        class: Messenger\MessageBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
