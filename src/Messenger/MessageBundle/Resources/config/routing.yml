@@ -1,0 +1,17 @@
+messenger_message_homepage:
+    path:     /
+    defaults: { _controller: MessengerMessageBundle:Page:index }
+    requirements:
+             methods:  GET
+
+messenger_message_listmessages:
+    path:  /list-messages
+    defaults: { _controller: MessengerMessageBundle:Message:listmessages }
+    requirements:
+        methods:  GET
+
+messenger_message_sendmessages:
+    path:  /send-messages
+    defaults: { _controller: MessengerMessageBundle:File:sendmessages }
+    requirements:
+        methods:  GET|POST

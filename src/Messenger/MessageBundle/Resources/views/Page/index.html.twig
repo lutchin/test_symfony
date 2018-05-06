@@ -1,0 +1,6 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <a href="{{ path('messenger_message_sendmessages') }}">Отправить сообщение!</a></br>
+    <a href="{{ path('messenger_message_listmessages') }}">Посмотреть все сообщения!</a>
+{% endblock %}
