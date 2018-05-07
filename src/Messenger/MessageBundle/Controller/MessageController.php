@@ -7,7 +7,7 @@
  */
 namespace Messenger\MessageBundle\Controller;
 
-use Messenger\MessageBundle\Entity\File;
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class MessageController extends Controller
@@ -19,7 +19,7 @@ class MessageController extends Controller
 
 		$list = $em->createQueryBuilder()
 			->select('m')
-			->from('MessengerMessageBundle:File',  'm')
+			->from('MessengerMessageBundle:Message',  'm')
 			->addOrderBy('m.id', 'ASC')
 			->getQuery()
 			->getResult();

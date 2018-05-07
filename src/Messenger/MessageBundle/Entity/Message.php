@@ -31,9 +31,28 @@ class Message
 	private $id;
 
 	/**
-	 * @var string
+	 *
 	 * @Assert\NotBlank
+	 * Many File have One Message.
+	 * @ORM\ManyToOne(targetEntity="Messenger\MessageBundle\Entity\File")
+	 */
+	private $file;
+
+	/**
+	 * @var string
+	 *
+	 * @Assert\NotBlank
+	 * @ORM\Column(name="title", type="string", length=255)
+	 */
+	private $title;
+
+	/**
+	 * @var string
+	 *
+	 * @Assert\NotBlank
+	 *
 	 * @ORM\Column(name="message", type="string", length=255)
+	 *
 	 */
 	private $message;
 
@@ -69,9 +88,37 @@ class Message
 		$this->message = $message;
 	}
 
-	public function __toString()
+	/**
+	 * @return string
+	 */
+	public function getFile()
 	{
-		return $this->getMessage();
+		return $this->file;
 	}
+
+	/**
+	 * @param string $file
+	 */
+	public function setFile($file)
+	{
+		$this->file = $file;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getTitle()
+	{
+		return $this->title;
+	}
+
+	/**
+	 * @param string $title
+	 */
+	public function setTitle($title)
+	{
+		$this->title = $title;
+	}
+
 
 }

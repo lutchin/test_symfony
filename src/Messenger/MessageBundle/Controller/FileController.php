@@ -10,7 +10,7 @@ namespace Messenger\MessageBundle\Controller;
 
 use Messenger\MessageBundle\Entity\File;
 use Messenger\MessageBundle\Entity\Message;
-use Messenger\MessageBundle\Form\FilesType;
+use Messenger\MessageBundle\Form\MessageType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -18,27 +18,29 @@ class FileController extends Controller
 {
 	public function sendmessagesAction(Request $request)
 	{
-		$file = new File();
-		$form = $this->createForm(FilesType::class, $file);
+		$message = new Message();
+		$form = $this->createForm(MessageType::class, $message);
 
 
 		$form->handleRequest($request);
 
 		if ($form->isSubmitted() && $form->isValid()) {
 
-			$message = new Message();
-			$message->setMessage($form->get('message')->getData());
+			$file = new File();
+			$file ->setFile($form->get('file')->getData());
 
-			$file_name = $file->getfile();
+
+			$file_name = $file->getFile();
 			$fileName = md5(uniqid()).'.'.$file_name->guessExtension();
 			$file_name->move(
 				$this->getParameter('files_directory'),
 				$fileName
 			);
-			$file->setTitle($form->get('title')->getData());
 			$file->setFile($fileName);
-			$file->setMessage($message);
 
+			$message->setFile($file);
+			$message->setTitle($form->get('title')->getData());
+			$message->setMessage($form->get('message')->getData());
 
 			$em = $this->getDoctrine()->getManager();
 			$em->persist($file);

@@ -36,22 +36,6 @@ class File
 	 */
 	private $file;
 
-	/**
-	 * @var string
-	 *
-	 * @Assert\NotBlank
-	 * @ORM\Column(name="title", type="string", length=255)
-	 */
-	private $title;
-
-	/**
-	 *
-	 * @Assert\NotBlank
-	 * Many File have One Message.
-	 * @ORM\ManyToOne(targetEntity="Messenger\MessageBundle\Entity\Message")
-	 *
-	 */
-	private $message;
 
 	/**
 	 * @return int
@@ -85,36 +69,9 @@ class File
 		$this->file = $file;
 	}
 
-	/**
-	 * @return string
-	 */
-	public function getTitle()
+	public function __toString()
 	{
-		return $this->title;
-	}
-
-	/**
-	 * @param string $title
-	 */
-	public function setTitle($title)
-	{
-		$this->title = $title;
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getMessage()
-	{
-		return $this->message;
-	}
-
-	/**
-	 * @param string $message
-	 */
-	public function setMessage($message)
-	{
-		$this->message = $message;
+		return $this->getFile();
 	}
 
 
