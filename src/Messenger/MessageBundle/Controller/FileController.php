@@ -27,18 +27,26 @@ class FileController extends Controller
 		if ($form->isSubmitted() && $form->isValid()) {
 
 			$file = new File();
-			$file ->setFile($form->get('file')->getData());
+			$file ->setFile($form->get('upload_file')->getData());
 
 
-			$file_name = $file->getFile();
+			$file_names = $file->getFile();
+			$fileNames = array();
+			foreach ($file_names as $file_name){
+
+
+
 			$fileName = md5(uniqid()).'.'.$file_name->guessExtension();
 			$file_name->move(
 				$this->getParameter('files_directory'),
 				$fileName
 			);
-			$file->setFile($fileName);
+				array_push($fileNames,$fileName);
 
-			$message->setFile($file);
+			}
+						
+			$file->setFile($fileNames);
+			$message->addFile($file);
 			$message->setTitle($form->get('title')->getData());
 			$message->setMessage($form->get('message')->getData());
 

@@ -1,124 +1,158 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Администратор
- * Date: 05.05.2018
- * Time: 15:21
- */
-
 namespace Messenger\MessageBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
+class Message {
 
+    /**
+     * @var integer
+     */
+    private $id;
 
-/**
-* Message
-*
-* @ORM\Table(name="message")
-* @ORM\Entity
-*/
+    /**
+     * @var string
+     */
+    private $title;
 
-class Message
-{
-	/**
-	 * @var int
-	 *
-	 * @ORM\Column(name="id", type="integer")
-	 * @ORM\Id
-	 * @ORM\GeneratedValue(strategy="AUTO")
-	 */
-	private $id;
+    /**
+     * @var string
+     */
+    private $message;
 
-	/**
-	 *
-	 * @Assert\NotBlank
-	 * Many File have One Message.
-	 * @ORM\ManyToOne(targetEntity="Messenger\MessageBundle\Entity\File")
-	 */
-	private $file;
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $files;
 
-	/**
-	 * @var string
-	 *
-	 * @Assert\NotBlank
-	 * @ORM\Column(name="title", type="string", length=255)
-	 */
-	private $title;
+    /**
+     * @var string
+     */
+    private $uploadFile;
 
-	/**
-	 * @var string
-	 *
-	 * @Assert\NotBlank
-	 *
-	 * @ORM\Column(name="message", type="string", length=255)
-	 *
-	 */
-	private $message;
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->files = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
-	/**
-	 * @return int
-	 */
-	public function getId()
-	{
-		return $this->id;
-	}
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
-	/**
-	 * @param int $id
-	 */
-	public function setId($id)
-	{
-		$this->id = $id;
-	}
+    /**
+     * Set title
+     *
+     * @param string $title
+     *
+     * @return Message
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
 
-	/**
-	 * @return string
-	 */
-	public function getMessage()
-	{
-		return $this->message;
-	}
+        return $this;
+    }
 
-	/**
-	 * @param string $message
-	 */
-	public function setMessage($message)
-	{
-		$this->message = $message;
-	}
+    /**
+     * Get title
+     *
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getFile()
-	{
-		return $this->file;
-	}
+    /**
+     * Set message
+     *
+     * @param string $message
+     *
+     * @return Message
+     */
+    public function setMessage($message)
+    {
+        $this->message = $message;
 
-	/**
-	 * @param string $file
-	 */
-	public function setFile($file)
-	{
-		$this->file = $file;
-	}
+        return $this;
+    }
 
-	/**
-	 * @return string
-	 */
-	public function getTitle()
-	{
-		return $this->title;
-	}
+    /**
+     * Get message
+     *
+     * @return string
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
 
-	/**
-	 * @param string $title
-	 */
-	public function setTitle($title)
-	{
-		$this->title = $title;
-	}
+    /**
+     * Add file
+     *
+     * @param \Messenger\MessageBundle\Entity\File $file
+     *
+     * @return Message
+     */
+    public function addFile(\Messenger\MessageBundle\Entity\File $file)
+    {
+        $this->files[] = $file;
+
+        return $this;
+    }
+
+    /**
+     * Remove file
+     *
+     * @param \Messenger\MessageBundle\Entity\File $file
+     */
+    public function removeFile(\Messenger\MessageBundle\Entity\File $file)
+    {
+        $this->files->removeElement($file);
+    }
+
+    /**
+     * Get files
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getFiles()
+    {
+        return $this->files;
+    }
+
+    /**
+     * Set files
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function setFiles()
+    {
+        return $this->files;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUploadFile()
+    {
+        return $this->uploadFile;
+    }
+
+    /**
+     * @param string $uploadFile
+     */
+    public function setUploadFile($uploadFile)
+    {
+        $this->uploadFile = $uploadFile;
+    }
 
 
 }

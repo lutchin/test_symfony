@@ -1,0 +1,19 @@
+Messenger\MessageBundle\Entity\File:
+    type: entity
+    table: file
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        file:
+            type: array
+            nullable: false
+            length: 255
+    manyToMany:
+        message:
+            targetEntity: Message
+            mappedBy: file
+    lifecycleCallbacks: {  }

@@ -3,9 +3,12 @@
 {% block body %}
     <p>Все сообщения!</p></br>
     {% for message in list %}
+        {% for files in message.files %}
 
+             <p> Сообщение №{{ message.id }} :{% for file in files.file %} <a href="{{ asset('uploads/files/' ~ file) }}">Посмотреть файл (PDF)</a> {% endfor %}Заголовок:{{ message.title }} Сообщение:{{ message.message }}</p>
 
-        <p> Файл №{{ message.id }} : <a href="{{ asset('uploads/files/' ~ message.file) }}">Посмотреть файл (PDF)</a> Заголовок:{{ message.title }} Сообщение:{{ message.message }}</p>
+        {% endfor %}
+
 
 
 

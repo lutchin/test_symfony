@@ -1,78 +1,96 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Администратор
- * Date: 05.05.2018
- * Time: 15:21
- */
-
 namespace Messenger\MessageBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
+class File {
 
-/**
- * File
- *
- * @ORM\Table(name="file")
- *@ORM\Entity
- */
-class File
-{
-	/**
-	 * @var int
-	 *
-	 * @ORM\Column(name="id", type="integer")
-	 * @ORM\Id
-	 * @ORM\GeneratedValue(strategy="AUTO")
-	 */
-	private $id;
+    /**
+     * @var integer
+     */
+    private $id;
 
-	/**
-	 * @ORM\Column(type="string")
-	 *
-	 * @Assert\NotBlank
-	 * @Assert\File(mimeTypes={ "application/pdf" })
-	 */
-	private $file;
+    /**
+     * @var array
+     */
+    private $file = array();
 
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     */
+    private $message;
 
-	/**
-	 * @return int
-	 */
-	public function getId()
-	{
-		return $this->id;
-	}
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->message = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
-	/**
-	 * @param int $id
-	 */
-	public function setId($id)
-	{
-		$this->id = $id;
-	}
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
-	/**
-	 * @return mixed
-	 */
-	public function getFile()
-	{
-		return $this->file;
-	}
+    /**
+     * Set file
+     *
+     * @param array $file
+     *
+     * @return File
+     */
+    public function setFile(array $file)
+    {
+        $this->file = $file;
 
-	/**
-	 * @param mixed $file
-	 */
-	public function setFile($file)
-	{
-		$this->file = $file;
-	}
+        return $this;
+    }
 
-	public function __toString()
-	{
-		return $this->getFile();
-	}
+    /**
+     * Get file
+     *
+     * @return array
+     */
+    public function getFile()
+    {
+        return $this->file;
+    }
 
+    /**
+     * Add message
+     *
+     * @param \Messenger\MessageBundle\Entity\Message $message
+     *
+     * @return File
+     */
+    public function addMessage(\Messenger\MessageBundle\Entity\Message $message)
+    {
+        $this->message[] = $message;
 
+        return $this;
+    }
+
+    /**
+     * Remove message
+     *
+     * @param \Messenger\MessageBundle\Entity\Message $message
+     */
+    public function removeMessage(\Messenger\MessageBundle\Entity\Message $message)
+    {
+        $this->message->removeElement($message);
+    }
+
+    /**
+     * Get message
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
 }

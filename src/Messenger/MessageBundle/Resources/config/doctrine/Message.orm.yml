@@ -1,0 +1,32 @@
+Messenger\MessageBundle\Entity\Message:
+    type: entity
+    table: message
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            nullable: false
+            length: 255
+        message:
+            type: string
+            nullable: false
+            length: 255
+    manyToMany:
+        files:
+            targetEntity: File
+            joinTable:
+                name: message_has_file
+                joinColumns:
+                    message_id:
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    file_id:
+                        referencedColumnName: id
+                        unique: true
+
+    lifecycleCallbacks: {  }
