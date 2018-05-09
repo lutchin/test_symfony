@@ -31,10 +31,10 @@ class FileController extends Controller
 
 
 			$file_names = $file->getFile();
+
+			
 			$fileNames = array();
 			foreach ($file_names as $file_name){
-
-
 
 			$fileName = md5(uniqid()).'.'.$file_name->guessExtension();
 			$file_name->move(
