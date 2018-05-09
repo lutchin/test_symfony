@@ -44,7 +44,7 @@ class FileController extends Controller
 				array_push($fileNames,$fileName);
 
 			}
-						
+
 			$file->setFile($fileNames);
 			$message->addFile($file);
 			$message->setTitle($form->get('title')->getData());
