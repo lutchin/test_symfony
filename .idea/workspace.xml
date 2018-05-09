@@ -1,56 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f545233f-be27-4ac5-922e-03d1c2ab820c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Messenger/MessageBundle/Resources/public/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Messenger/MessageBundle/Resources/public/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Messenger/MessageBundle/Resources/public/js/datepicker-pl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Messenger/MessageBundle/Resources/public/js/flashmessage.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Messenger/MessageBundle/Resources/public/js/form.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Messenger/MessageBundle/Resources/public/js/html5shiv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Messenger/MessageBundle/Resources/public/js/ie.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Messenger/MessageBundle/Resources/public/js/jquery-ui-1.9.2.custom.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Messenger/MessageBundle/Resources/public/js/jquery.backstretch.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Messenger/MessageBundle/Resources/public/js/jquery.easing.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Messenger/MessageBundle/Resources/public/js/jquery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Messenger/MessageBundle/Resources/public/js/npm.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Messenger/MessageBundle/Resources/public/js/respond.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Messenger/MessageBundle/Resources/public/js/select2/i18n/pl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Messenger/MessageBundle/Resources/public/js/select2/select2.full.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Messenger/MessageBundle/Resources/public/js/select2/select2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/11380457d461e1cb1e89d8ad55f6e81b.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/180b9c3952d4b9d57d3e5875be36c1e1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/28ce3e201c271a49e48605803c012034.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/3a98db23fe0a4043984424dbe5a187d9.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/3f3d1d63a450900255d123d0c6a93264.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/4095dce2363200e4841415f469143a15.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/5195516303f91a7a0933897c7e3ef917.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/53c4a8599a9d4c7b4ce09801f5ee2e56.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/575c8d03df4697570cdb3a2a867ad14d.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/5ad5fd3ccad7fe83f2ac0e337b0d2241.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/5b409c5124096a053f18c13f9f655c42.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/5c831ca22fe58be5aaa4a5f042c90b9f.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/5e1f57d9d0e78a7c6546fb868c7f2021.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/5e697273b259cb3d67e2d0bacff0833d.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/60b3d5179ee13f79fb9ea7393dd241ee.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/61dd4c8755ea4fee634458d82fb25310.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/6bf4b8fc387e777691e8ba311d848ddd.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/71463d741b13ed279d3cc710a3df4426.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/7c62fe1a1a0960b3df4f9ff08589ca35.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/8100527db96ac9b6dadba5cee966e0f0.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/8585d5939be4503ad5537ad12ab5f5d7.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/9d3666b6d592cd9e0785837ebd130d65.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/b32b30b5dcbe799b425c2f767cb58e95.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/b80bea3cfd746ef34daf7938b5672901.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/b84334f766bfe5182babad243a954f7e.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/be77468f3bbc01326a2f90febe2f5611.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/d563aa1e05319556446c51780d81fef3.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/d8b505920089b7ca5c8007fb74ca5d4b.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/e59661911e959dd2d80b70acb7a9d194.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/files/efb9c298b63d0c6871dc2450aeab8e89.pdf" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Messenger/MessageBundle/Controller/FileController.php" afterPath="$PROJECT_DIR$/src/Messenger/MessageBundle/Controller/FileController.php" />
-    </list>
+    <list default="true" id="f545233f-be27-4ac5-922e-03d1c2ab820c" name="Default" comment="" />
     <ignored path="symfony3.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -652,7 +603,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="-5" width="1930" height="1050" extended-state="0" />
+    <frame x="-5" y="-5" width="1930" height="1050" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2683706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
