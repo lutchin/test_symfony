@@ -9,7 +9,7 @@ Messenger\MessageBundle\Entity\File:
                 strategy: AUTO
     fields:
         file:
-            type: array
+            type: string
             nullable: false
             length: 255
     manyToMany:

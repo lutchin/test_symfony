@@ -33,7 +33,7 @@ class FileController extends Controller
 			$file_names = $file->getFile();
 
 			
-			$fileNames = array();
+
 			foreach ($file_names as $file_name){
 
 			$fileName = md5(uniqid()).'.'.$file_name->guessExtension();
@@ -41,19 +41,17 @@ class FileController extends Controller
 				$this->getParameter('files_directory'),
 				$fileName
 			);
-				array_push($fileNames,$fileName);
+
+			$file->setFile($fileName);
+			$message->addFile($file);
 
 			}
-
-			$file->setFile($fileNames);
-			$message->addFile($file);
-			$message->setTitle($form->get('title')->getData());
+            $em = $this->getDoctrine()->getManager();
+            $message->setTitle($form->get('title')->getData());
 			$message->setMessage($form->get('message')->getData());
-
-			$em = $this->getDoctrine()->getManager();
-			$em->persist($file);
 			$em->persist($message);
-			$em->flush();
+			$em->persist($file);
+            $em->flush();
 
 			$this->get('session')->getFlashBag()->add('notice', 'Сообщение добавлено. Спасибо!');
 

@@ -9,9 +9,9 @@ class File {
     private $id;
 
     /**
-     * @var array
+     * @var string
      */
-    private $file = array();
+    private $file;
 
     /**
      * @var \Doctrine\Common\Collections\Collection
@@ -39,11 +39,11 @@ class File {
     /**
      * Set file
      *
-     * @param array $file
+     * @param string $file
      *
      * @return File
      */
-    public function setFile(array $file)
+    public function setFile($file)
     {
         $this->file = $file;
 
@@ -53,7 +53,7 @@ class File {
     /**
      * Get file
      *
-     * @return array
+     * @return string
      */
     public function getFile()
     {
